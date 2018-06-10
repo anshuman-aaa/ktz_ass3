@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/x-icon" href="calc.jpg" />
+<script src="index_js.js"></script>
+<link rel="stylesheet" type="text/css" href="index_css.css">
+</head>
+
+<body>
+
+
+
+<div id="header"><h1>Calculator</h1></div>
+<button id="inst" value="instruction" onclick="myinst()">INSTRUCTION</button>
+<div  class="calculator">
+<form id="calc" name="calc">
+<input type="text" name="display" id="result" disabled>
+
+<br>
+<div class="row">
+<input type="button" value =" sin " name="sin" id="bttnsin" onclick="mysin()" >
+<input type="button" value =" cos " name="cos" id="bttncos" onclick="mycos()" >
+<input type="button" value =" tan " name="tan" id="bttntan" onclick="mytan()" >
+</div>
+<br>
+<div class="row">
+<input type="button" value =" log " name="log" id="bttnlog" onclick="mylog()" >
+<input type="button" value =" sqrt " name="sqrt" id="bttnsqrt" onclick="mysqrt()">
+<input type="button" value =" sqr " name="sqr" id="bttnsqr" onclick="mysqr()">
+</div>
+<br>
+<div class="row">
+<input type="button" value =" LCM " name="l" id="bttnlcm" onclick="display.value= mylcm(display.value)" >
+<input type="button" value =" HCF " name="h" id="bttnhcf" onclick="display.value= myhcf(display.value)">
+<input type="button" value=" ! " name="fact" id="bttnfact" onclick="display.value= myfact(display.value)">
+</div>
+<br>
+<div class="row">
+<input type="button" value =" Asin " name="l" id="bttnlcm" onclick="myasin()" >
+<input type="button" value =" Acos " name="h" id="bttnhcf" onclick="myacos()">
+<input type="button" value=" Atan " name="fact" id="bttnfact" onclick="myatan()">
+</div>
+<br>
+<div class="row">
+<input type="button" value=" 1 " name="button" id="bttn1" onclick="my1()" >
+<input type="button" value=" 2 " name="button" id="bttn2" onclick="my2()" >
+<input type="button" value=" 3 " name="button" id="bttn3" onclick="my3()">
+</div>
+<br>
+<div class="row">
+<input type="button" value=" 4 " name="button" id="bttn4" onclick="my4()">
+<input type="button" value=" 5 " name="button" id="bttn5" onclick="my5()">
+<input type="button" value=" 6 " name="button" id="bttn6" onclick="my6()">
+</div>
+<br>
+<div class="row">
+<input type="button" value=" 7 " name="button" id="bttn7" onclick="my7()">
+<input type="button" value=" 8 " name="button" id="bttn8" onclick="my8()">
+<input type="button" value=" 9 " name="button" id="bttn9" onclick="my9()">
+</div>
+<br>
+<div class="row">
+<input type="button" value=" 0 " name="button" id="bttn0" onclick="my0()" >
+<input type="button" value=" + " name="button" id="bttnadd" onclick="myadd()">
+<input type="button" value=" - " name="button" id="bttn-" onclick="mysub()">
+</div>
+<br>
+<div class="row">
+<input type="button" value=" / " name="button" id="bttndiv" onclick="mydiv()" >
+<input type="button" value=" * " name="button" id="bttnmult" onclick="mymult()">
+<input type="button" value =" . " name="." id="bttndot" onclick="mydot()">
+</div>
+<br>
+<div class="row">
+<input type="button" value =" , " name="," id="bttncom" onclick="mycom()">
+<input type="button" value=" = " name="button" id="bttn" onclick="display.value= eval(display.value)">
+<input type="button" value= "Erase" id="bttn" onclick="display.value='' ">
+</div>
+<br>
+</form>
+</div>
+
+
+<div style='text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;display:block !important;'></div></body>
+</html>
