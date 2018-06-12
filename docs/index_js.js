@@ -1,4 +1,3 @@
-//script
 function myinst()
 {
 	mywindow=window.open("aaa.html", "","width=500, height=500" )
@@ -88,23 +87,61 @@ function myfact(x){
 		return x*myfact(x-1);
 }
 
-function myhcf(a,b){
-	let dataArray = Array.from(x.toString());
-	x=dataArray[0];
-	y=dataArray[2];
-	var c=function hcf(x,y){
-	
 
-	if (x==0 || y==0) return 0;
-	if (x==y) return x;
-	if (x>y) return hcf(x-y,y);
-	else return hcf(x,y-x);
-}
-return c;
-}
 
-function lcm(x,y){
-	return (x*y)/hcf(x,y);
-}
 
 	
+function gcd(s)
+		{
+			var a = s.split(".");
+			var b=a[0];
+			var  c=a[1];
+			if (b>c){
+				var temp=b;
+				b=c;
+				c=temp;
+			}
+			for(temp=1;temp<=b;temp++){
+				if (b%temp==0 && c%temp==0) 
+					gcd=temp;
+			}
+			return gcd;
+	/*		a = Math.abs(a);
+  b = Math.abs(b);
+  while(b) {
+    var t = b;
+    b = a % b;
+    a = t;
+  }
+  return a;*/
+  			 /*a = Math.abs(a);
+    b = Math.abs(b);
+    if (b > a) {var temp = a; a = b; b = temp;}
+    while (true) {
+        if (b == 0) return a;
+        a %= b;
+        if (a == 0) return b;
+        b %= a;
+    
+		}*/
+		/*if (a == 0)
+        return b;
+
+    while (b != 0) {
+        if (a > b)
+            a = a - b;
+        else
+            b = b - a;
+    }
+
+    return a;
+}*/
+}
+	
+function lcm(s){
+			var d = s.split("..");
+			var b=d[0];
+			var c=d[1];
+			g = gcd(b+"."+c);
+			return (b*c)/g;
+		}
