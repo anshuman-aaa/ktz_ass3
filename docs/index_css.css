@@ -1,93 +1,156 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>Calculator</title>
-<meta charset="utf-8">
+body{
+	
+	background-color: slategrey;
+	background-repeat: no-repeat;
+	background-position:center;
+	width: cover;
+	height:cover;
+}
+#inst
+{	color: white;
+	position: absolute;
+	top: 40%;
+	left: 5%;
+	padding: 30px;
+	border-radius: 15px 30px 15px 30px ;
+	font-family: algerian;
+	font-size: 2vw;
+	border: 10px solid black;
+	background-color:#3d3d29
+}
+
+#header {
+		  
+	      font-family: 'algerian';
+		  color: blue;
+		  text-align:center;
+		  border: 2px solid white;
+		  border-radius: 10px 30px 10px 30px;
+		  background-color: black; 
+		  text-shadow: 2px 2px 2px 2px;
+		  
+}
+#head {
+		  top: 0px;
+		  padding: 5px;
+	      font-family: 'Poor Story', cursive;
+		  color: white;
+		  text-align:center;
+		  border: 2px solid blue;
+		  border-radius: 10px 30px 10px 30px; 
+		  background-color: black;
+		  box-shadow: 1px 1px 1px #aaaaaa;
+		  font-weight:bold;
+	      text-shadow: 1px 2px 2px white;
+}
+
+.row {
+	position:relative;
+	top:1px;
+	
+}
 
 
-<script src="index_js.js"></script>
-<link rel="stylesheet" type="text/css" href="index_css.css">
-</head>
+#inst
+{
+	
+}
 
-<body>
+.calculator{
+	
+	margin-left:auto;
+	margin-right:auto;
+	width:50%;
+	position: absolute;
+	top: 20%;
+	left: 30%;
+	
+}
 
-
-
-<div id="header"><h1>Calculator</h1></div>
-<button id="inst" value="instruction" onclick="myinst()">INSTRUCTION<br><font size="3px" style="font-family:arial ;color:" >refer for hcf and lcm </font></button>
-<div  class="calculator">
-<form id="calc" name="calc">
-<input type="text" name="display" id="result">
-
-<br>
-<div class="row">
-<input type="button" value =" sin "  id="bttnsin" onclick="mysin()" >
-<input type="button" value =" cos "  id="bttncos" onclick="mycos()" >
-<input type="button" value =" tan "  id="bttntan" onclick="mytan()" >
-<input type="button" value =" log "  id="bttnlog" onclick="mylog()" >
-</div>
-<br>
-<div class="row">
-
-<input type="button" value =" sqrt "  id="bttnsqrt" onclick="mysqrt()">
-<input type="button" value =" sqr " id="bttnsqr" onclick="mysqr()">
-<input type="button" value =" LCM " name="l" id="bttnlcm" onclick="display.value= lcm(display.value)" >
-<input type="button" value =" HCF "  id="bttnhcf" onclick="display.value= gcd(display.value)">
-</div>
-<br>
-<div class="row">
-
-<input type="button" value=" ! "  id="bttnfact" onclick="display.value= myfact(display.value)">
-<input type="button" value =" Asin "  id="bttnlcm" onclick="myasin()" >
-<input type="button" value =" Acos "  id="bttnhcf" onclick="myacos()">
-<input type="button" value=" Atan "  id="bttnfact" onclick="myatan()">
-</div>
-<br>
-<div class="row">
-<input type="button" value=" 1 " name="button" id="bttn1" onclick="my1()" >
-<input type="button" value=" 2 " name="button" id="bttn2" onclick="my2()" >
-<input type="button" value=" 3 " name="button" id="bttn3" onclick="my3()">
-<input type="button" value=" 4 " name="button" id="bttn4" onclick="my4()">
-</div>
-<br>
-<div class="row">
-<input type="button" value=" 5 " name="button" id="bttn5" onclick="my5()">
-<input type="button" value=" 6 " name="button" id="bttn6" onclick="my6()">
-<input type="button" value=" 7 " name="button" id="bttn7" onclick="my7()">
-<input type="button" value=" 8 " name="button" id="bttn8" onclick="my8()">
-</div>
-<br>
-<div class="row">
-
-<input type="button" value=" 9 " id="bttn9" onclick="my9()">
-<input type="button" value=" 0 " id="bttn0" onclick="my0()" >
-<input type="button" value=" + " id="bttnadd" onclick="myadd()">
-<input type="button" value=" - " id="bttn-" onclick="mysub()">
-</div>
-<br>
-<div class="row">
-<input type="button" value=" / "  id="bttndiv" onclick="mydiv()" >
-<input type="button" value=" * "  id="bttnmult" onclick="mymult()">
-<input type="button" value =" . " id="bttndot" onclick="mydot()">
-<input type="button" value =" , " id="bttncom" onclick="mycom()">
-</div>
-<br>
-<div class="row">
-<input type="button" value=" = " name="button" id="bttn" onclick="display.value= eval(display.value)">
-<input type="button" value= "Clear" id="bttn" onclick="display.value='' ">
-</div>
-<br>
-<div class="row">
-<a href="index.html">
-    <button id="bttnref">REFRESH</button>
-</a>
-
-</div>
-<br>
-</form>
-</div>
+#calc
+{
+	display:block;
+	padding: 16px;
+	width:contain;
+	float:left;
+	position:relative;
+    top:12px;	
+	border-radius: 25px 40px 25px 40px;
+	border: 10px solid black;
+	background-color:#3d3d29;
+}
+		  
+#result
+{
+	padding:25px;
+	border-radius: 40px 40px 40px 40px;
+	border: 8px solid black;
+	background-color:#ffffff;
+	font-size:27px;
+	width: 100%;
+	font-weight:bold;
+}
 
 
-</body>
-</html>
+
+#bttn1, #bttn2, #bttn3, #bttn4, #bttn5, #bttn6, #bttn7, #bttn8, #bttn9, #bttn0, #bttn-, #bttnsin, #bttncos, #bttnadd ,#bttntan,#bttnlog,#bttnsqrt,#bttnsqr,#bttnlcm,#bttnhcf,#bttnmult,#bttndiv,#bttndot,#bttnfact,#bttncom
+{
+	border-radius: 40px 40px 40px 40px;
+	display:inline;
+	font-family: 'Anton', sans-serif;
+	padding:3px;
+	font-size: 16px;
+	position:relative;
+	top:3px;
+	left:10px;
+	width: 120px;
+	font-weight:bold;
+	background-color:#e6fffa;
+	border: 2px solid black;
+}
+#bttn
+{
+	border-radius: 40px 40px 40px 40px;
+	display:inline;
+	font-family: 'Anton', sans-serif;
+	padding:3px;
+	font-size: 16px;
+	position:relative;
+	top:3px;
+	left:10px;
+	width: 49.5%;
+	font-weight:bold;
+	background-color:#e6fffa;
+	border: 2px solid black;
+}
+#list
+{
+	color:black;
+}
+#clse
+{	padding: 20px;
+	position: absolute;
+	bottom: 10%;
+	right: 10%;
+	background-color:#0054aa ;
+	font-family: 'Poor Story', cursive;
+	border-radius: 25px 40px 25px 40px;
+}
+* {
+    box-sizing: border-box;
+}
+#bttnref
+{	padding: 5px;
+	border-radius: 40px 40px 40px 40px;
+	display:inline;
+	font-family: 'Anton', sans-serif;
+	padding:3px;
+	font-size: 16px;
+	position:relative;
+	top:3px;
+	left:10px;
+	width: 100%;
+	font-weight:bold;
+	background-color:#e6fffa;
+	border: 2px solid black;}
